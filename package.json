@@ -1,0 +1,14 @@
+{
+    "name": "4amigos",
+    "version": "0.1.0",
+    "private": true,
+   
+    "scripts": {
+      "start": "cd ./4amigos && npm start",
+      "build": "cd ./4amigos &&  npm build",
+      "test": "cd ./4amigos &&  npm test",
+      "eject": "cd ./4amigos &&  npm eject"
+    }
+    
+  }
+  
