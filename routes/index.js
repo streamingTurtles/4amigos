@@ -7,7 +7,7 @@ router.use("/api", apiRoutes);
 
 // If no API routes are located, send the app to index.html
 router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../5amigosFE/src/index.html"));
+  res.sendFile(path.join(__dirname, "../client/public/index.html"));
 });
 
 module.exports = router;

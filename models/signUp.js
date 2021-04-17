@@ -10,6 +10,6 @@ const signUpSchema = new Schema({
   link: String
 });
 
-const Book = mongoose.model("SignUp", signUpSchema);
+const SignUp = mongoose.model("SignUp", signUpSchema);
 
 module.exports = SignUp;
