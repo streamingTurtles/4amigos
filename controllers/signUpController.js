@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models");  // one is for signup & another for repo
 
 // gitHub db methods 
 module.exports = {
@@ -24,6 +24,8 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+
 
   create: function(req, res) {
     db.SignUp
