@@ -1,28 +1,30 @@
 import React from "react";
 
-
 const style = {
-    content:{
-        margin: 50,
-        padding:30,
-        width:300,
-        borderStyle:'outset'
-
-    }
-}
-
-class Setting extends React.Component {
-
-    render(props) {
-      return (
-       
-  <div style={style.content}>
-  <input type="file"  accept="image/*" name="image" onChange={props.onChange}></input>
-  <input type="submit"></input>
-  </div>
-      
-    );
+  content: {
+    margin: 50,
+    padding: 30,
+    width: 300,
+    borderStyle: "outset",
+  },
+  img:{
+    display: "none"
   }
+};
+
+function Setting(props) {
+  return (
+    <div style={style.content}>
+    <p>Setting</p>
+     <form>
+      <input
+        type="file"
+        accept=".jpg, .jpeg, .png"
+        onChange={props.onChange}
+      />
+      </form>
+    </div>
+  );
 }
 
 export default Setting;

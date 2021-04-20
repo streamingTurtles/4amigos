@@ -12,7 +12,6 @@ const style = {
 }
 
 class Bookmark extends React.Component {
-
     render() {
       return (
         <Draggable bounds="parent">
