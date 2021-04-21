@@ -6,22 +6,22 @@ export default [
             displayName:"Free code camp"
         },{
             link: "https://coderbyte.com",
-            displayName:"coder byte"
+            displayName:"Coder byte"
         },{
             link: "https://www.datacamp.com",
-            displayName:"data camp"
+            displayName:"Data camp"
         },{
             link: "https://www.hackerrank.com",
-            displayName:"hacker rank"
+            displayName:"Hacker rank"
         },{
             link: "https://www.hackerearth.com",
-            displayName:"hacker earth"
+            displayName:"Hacker earth"
         },{
             link: "https://www.codingame.com",
-            displayName:"coding game"
+            displayName:"Coding game"
         },{
             link: "https://www.topcoder.com",
-            displayName:"top coder",
+            displayName:"Top coder",
             fontColor:"red"
         }
     
@@ -35,22 +35,22 @@ export default [
             displayName:"Linkedin"
         },{
             link: "https://www.dice.com",
-            displayName:"dice"
+            displayName:"Dice"
         },{
             link: "https://www.techcareers.com",
-            displayName:"tech careers"
+            displayName:"Tech careers"
         },{
             link: "https://talent500.co",
-            displayName:"talent 500"
+            displayName:"Talent 500"
         },{
-            link: "https://stackoverflow.com/jobs",
+            link: "https://Stackoverflow.com/jobs",
             displayName:"stackoverflow jobs"
         },{
             link: "https://www.themuse.com",
-            displayName:"the muse"
+            displayName:"The muse"
         },{
             link: "https://www.indeed.com/q-Prime-jobs.html */",
-            displayName:"indeed prime jobs"
+            displayName:"Indeed prime jobs"
         }
     
                
@@ -60,31 +60,31 @@ export default [
         "title":"Free and Inexpensive Code Courses",
         "resources":[{
             link:"https://www.codecademy.com",
-            displayName:"codecademy"
+            displayName:"Codecademy"
         },{
             link: "https://www.udemy.com",
-            displayName:"udemy"
+            displayName:"Udemy"
         },{
             link: "https://teamtreehouse.com",
-            displayName:"team treehouse"
+            displayName:"Team treehouse"
         },{
             link: "https://www.freecodecamp.org",
-            displayName:"free code camp"
+            displayName:"Free code camp"
         },{
             link: "https://www.edx.org",
-            displayName:"edx"
+            displayName:"Edx"
         },{
             link: "https://alison.com",
-            displayName:"alison"
+            displayName:"Alison"
         },{
             link: "https://www.w3schools.com",
             displayName:"W3 schools"
         },{
             link: "https://www.tutorialspoint.com/index.htm",
-            displayName:"tutorials point"
+            displayName:"Tutorials point"
         },{
             link: "https://www.datacamp.com",
-            displayName:"datacamp",
+            displayName:"Datacamp",
             fontColor:"red"
         },
         ]
@@ -93,25 +93,25 @@ export default [
             "title":"Coding Groups",
             "resources":[{
                 link:"https://www.meetup.com/",
-                displayName:"meet up"
+                displayName:"Meet up"
             },{
                 link:"https://www.meetup.com/OperationCode_NYC",
-                displayName:" meetup operation code nyc"
+                displayName:" Meetup operation code nyc"
             },{
                 link: "https://www.datacamp.com",
-                displayName:"data camp"
+                displayName:"Data camp"
             },{
                 link: "https://sites.google.com/a/nypl.org/techconnect/project_-code-1",
-                displayName:"new public library techconnect"
+                displayName:"New public library techconnect"
             },{
                 link: "https://ttp.nyc/web-development-fellowship */} */",
                 displayName:"NYC web development fellowship"
             },{
                 link: "https://www.codingame.com",
-                displayName:"coding game"
+                displayName:"Coding game"
             },{
                 link: "https://https://codebuddies.org/",
-                displayName:"code buddies",
+                displayName:"Code buddies",
                 fontColor:"red"
             }
         ]
