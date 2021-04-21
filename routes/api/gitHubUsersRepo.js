@@ -1,12 +1,12 @@
 const router = require("express").Router();
-const signUpController = require("../../controllers/signUpController");
+const gitHubController = require("../../controllers/gitHubController");
 
 router.route("/")
-  .get(signUpController.findAll)
-  .post(signUpController.create);
+  .get(gitHubController.findAll)
+  .post(gitHubController.create);
 
 router
   .route("/:id")
-  .delete(signUpController.remove);
+  .delete(gitHubController.remove);
 
 module.exports = router;

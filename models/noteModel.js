@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const notesSchema = {
-    // _id: {type: String},
+const notesSchema = new Schema({
     title: String,
     userName: String,
     githubRepo: {
@@ -10,7 +10,7 @@ const notesSchema = {
         url: String
     },
     content: String
-}
+});
 
 const Note = mongoose.model("Note", notesSchema);
 

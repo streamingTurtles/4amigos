@@ -1,7 +1,6 @@
 // import React, {useState} from "react";
 import React, {useEffect, useState} from "react";
 import axios from "axios"
-import REPOApp from "../utils/REPOApp";
 
 
 function BlogNoteAdd() {
@@ -10,15 +9,65 @@ function BlogNoteAdd() {
         content: '',
         gitHubRepo: {},
         username: ''
-    });
+    })
     
  
-
-
+// NOTES:    
+// handles the submit button click
+// pass in the username - useRef hook  instead of getdocumentById 
+// do the api github call here
+// do a srpead operator here
+// gitHubLink 
+// .then - set the state for gitHubRepo
+//
     function handleSubmitGitHub(e){
-        e.preventDefault();
-        REPOApp();
+        e.preventDefault()
+
     }
+
+    // function handleSubmitGitHub(e){
+    //     e.preventDefault();
+    //     const [appState, setAppState] = useState({loading: false, repos: null});
+
+    //     useEffect(() => {
+    //         setAppState({ loading: true });
+    //         const apiUrl = `https://api.github.com/users/streamingturtles/repos?per_page=1`;
+    //         fetch(apiUrl)
+    //           .then((res) => res.json())
+    //           .then((repos) => {
+    //             setAppState({ loading: false, repos: repos });
+    //           });
+    //       }, [setAppState]);
+    //       return (
+    //         <div className='App'>
+    //           <div className='container'>
+    //             <h1>My Repositories</h1>
+    //           </div>
+    //           <div className='repo-container'>
+    //             <ListLoading isLoading={appState.loading} repos={appState.repos} />
+    //           </div>
+    //           <footer>
+    //             <div className='footer'>
+    //               Built{' '}
+    //               <span role='img' aria-label='love'>
+    //                 💚
+    //               </span>{' '}
+    //               with by Shedrack Akintayo
+    //             </div>
+    //           </footer>
+    //         </div>
+    //       );
+    //     }
+
+    // }
+
+
+
+
+
+
+
+
 
 
 
@@ -89,4 +138,6 @@ function BlogNoteAdd() {
 export default BlogNoteAdd;
 
 
-         
+            /* <div className='form-group'>
+                <input onChange={handleChange} name="repolink" value={input.repolink} autoComplete="off" className="form-control" placeholder="blog repolink"></input>
+            </div> */
