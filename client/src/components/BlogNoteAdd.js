@@ -5,11 +5,23 @@ import axios from "axios"
 function BlogNoteAdd() {
     const [input, setInput] = useState({
         title: '',
-        // repolink: '',
-        content: ''
+        content: '',
+        gitHubRepo: {},
+        username: ''
     })
     
     
+// handles the submit button click
+// pass in the username - useRef hook  instead of getdocumentById 
+    function handleSubmitGitHub(e){
+        e.preventDefault()
+        // do the api github call here
+        // do a srpead operator here
+        // gitHubLink 
+        // .then - set the state for gitHubRepo
+    }
+
+
     function handleChange(event){
         // console.log(event.target);
         const {name, value} = event.target;
@@ -29,8 +41,9 @@ function BlogNoteAdd() {
 
         const newNote = {
             title: input.title,
-            // repolink: input.repolink,
-            content: input.content
+            content: input.content,
+            username: input.username,
+            gitHubRepo: input.gitHubRepo
         }
 
         // console.log(input);
@@ -48,9 +61,16 @@ function BlogNoteAdd() {
                 <input onChange={handleChange} name="title" value={input.title} autoComplete="off" className="form-control" placeholder="blog title"></input>
             </div>
 
+
             <div className='form-group'>
                 <input onChange={handleChange} name="repolink" value={input.repolink} autoComplete="off" className="form-control" placeholder="blog repolink"></input>
-            </div>
+                <input type="submit" className="btn btn-primary ml-2 mb-5" value="CLICK HERE TO GET MY REPO" onClick={handleSubmitGitHub}></input>
+                <ul id="userRepos"className="list-group mx-auto mb-5"></ul>
+            </div> 
+
+
+
+
 
             <div className='form-group'>
                 <textarea onChange={handleChange} name="content" value={input.content} autoComplete="off" className="form-control" placeholder="blog content"></textarea>
@@ -58,8 +78,16 @@ function BlogNoteAdd() {
 
             <button onClick={handleClick} className="btn btn-lg btn-info">Add Note</button>
         </form>
-    </div>
 
+
+
+
+    </div>
 }
 
 export default BlogNoteAdd;
+
+
+            /* <div className='form-group'>
+                <input onChange={handleChange} name="repolink" value={input.repolink} autoComplete="off" className="form-control" placeholder="blog repolink"></input>
+            </div> */

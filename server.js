@@ -41,8 +41,8 @@ mongoose.connect("mongodb+srv://admin:qweewq@cluster0.8c4p0.mongodb.net/notesDB"
 {
     useUnifiedTopology: true, 
     useNewUrlParser: true, 
-    useCreateIndex: true, 
-    useFindAndModify: false 
+    useCreateIndex: true
+    // useFindAndModify: false 
 });
 app.use("/", require("./routes/noteRoute"));
 

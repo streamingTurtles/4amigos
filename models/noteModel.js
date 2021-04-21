@@ -1,9 +1,14 @@
 const mongoose = require("mongoose");
 
 const notesSchema = {
-    _id: {type: String},
+    // _id: {type: String},
     title: String,
-    // repolink: String,
+    userName: String,
+    githubRepo: {
+        repo: String,
+        description: String,
+        url: String
+    },
     content: String
 }
 

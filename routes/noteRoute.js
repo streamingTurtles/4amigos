@@ -7,11 +7,9 @@ const Note = require("../models/noteModel");
 // its the http://localhost:3001/create  address
 router.route("/create").post((req, res) => {
     const title = req.body.title;
-    // const repolink = req.body.repolink;
     const content = req.body.content;
     const newNote = new Note ({
         title,
-        // repolink,
         content
     })
 
