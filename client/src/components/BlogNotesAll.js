@@ -16,7 +16,8 @@ function BlogNotesAll() {
 
 
 
-    return <div className='container'>
+    return (
+    <div className='container'>
         <h1>Here are all the blog notes</h1>
 
          {/* refactor to own component */}
@@ -33,7 +34,7 @@ function BlogNotesAll() {
         
 
     </div>
-
+    )
 }
 
 export default BlogNotesAll;
