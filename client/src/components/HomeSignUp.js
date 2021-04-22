@@ -1,8 +1,8 @@
 import React from "react"
-import ListResources from "../components/ListResources"
+import ListResources from "./ListResources"
 import resources from "../resources"
 var colors=["red","blue","green","orange"]
-function Home(){
+function HomeSignUp(){
     console.log (resources)
     return (
         <div>
@@ -26,4 +26,4 @@ function Home(){
     )
 }
 
-export default Home;
+export default HomeSignUp;
