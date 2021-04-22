@@ -39,10 +39,7 @@ function App() {
             <BlogNotesAll/>
           </Route>
 
-          <Route path = "/resources">
-            <Resources/>
-          </Route>
-
+       
         
       
         
