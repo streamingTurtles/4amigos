@@ -14,8 +14,8 @@ function BlogNoteAdd() {
     const [input, setInput] = useState({
         title: '',
         content: '',
-        gitHubRepo: {},
-        username: ''
+        // username: '',  // not created 
+    
     });
     
  
@@ -24,10 +24,10 @@ function BlogNoteAdd() {
     // function handleSubmitGitHub(){}
 
 
-
+    
     const [username, setUsername] = useState("");
     const [loading, setLoading] = useState(false);
-    const [repos, setRepos] = useState([]);
+    const [repos, setRepos] = useState({});  //this.setstate
 
     function handleSubmit(e){
         e.preventDefault();
@@ -37,10 +37,13 @@ function BlogNoteAdd() {
         setLoading(true);
         axios({
             method: "get",
-            url: `https://api.github.com/users/${username}/repos?per_page=2`,
+            url: `https://api.github.com/users/${username}/repos?per_page=1`,
         }).then(res => {
+            console.log(res);
             setLoading(false);
-            setRepos(res.data)
+            // setRepos(res.data);  to make only 1st index below
+            setRepos(res.data[0])
+            
         });
     }
     function renderRepo(repo){
@@ -61,12 +64,8 @@ function BlogNoteAdd() {
         // console.log(event.target);
         const {name, value} = event.target;
         
-        setInput(prevInput => {
-            return{
-                ...prevInput,
-                [name]: value
-            }
-        })
+        setInput({...input, [name]:value})            
+        
     }
 
 
@@ -79,8 +78,9 @@ function BlogNoteAdd() {
         const newNote = {
             title: input.title,
             content: input.content,
-            githubusername: input.githubusername,
-            gitHubRepo: input.gitHubRepo
+            repoName: repos.name,
+            githubusername: username
+            
         }
 
         // console.log(input);
@@ -110,9 +110,11 @@ function BlogNoteAdd() {
                     placeholder="gitHub Username Here"></input> */}
                 <input 
                     className='input'
+                    // name="repoName" 
+                    // value={input.repoName}
                     value={username} 
                     placeholder="GitHub Username"
-                    onChange={e => setUsername(e.target.value)}></input>
+                    onChange={e => setUsername(e.target.value)}/>
                 <button 
                     // className="btn btn-primary ml-2 mb-5"
                     className="button"
@@ -120,7 +122,8 @@ function BlogNoteAdd() {
                 </button>
                 {/* <ul id="userRepos"className="list-group mx-auto mb-5"></ul> */}
                 <div className="results-container">
-                    {repos.map(renderRepo)}
+                    {/* {repos.map(renderRepo)} */}
+                    {repos.name}
                 </div>
             </div>
 

@@ -1,19 +1,25 @@
 const express = require("express");
 const router = express.Router();
 const Note = require("../models/noteModel");
+// const Blog = require("../../models/blogNoteRepoModel");
 
 
 // specify here the address where we sent our newNote
 // its the http://localhost:3001/create  address
 router.route("/create").post((req, res) => {
+    console.log(req.body);
     const title = req.body.title;
+    const repoName = req.body.repoName;
     const content = req.body.content;
-    const newNote = new Note ({
+    const githubusername = req.body.githubusername;
+    const newBlogPost = new Note ({
         title,
-        content
+        repoName,
+        content,
+        githubusername
     })
 
-    newNote.save();
+    newBlogPost.save();
 })
 
 // another routed needed to now get from the DB to show 

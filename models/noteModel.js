@@ -3,13 +3,9 @@ const Schema = mongoose.Schema;
 
 const notesSchema = new Schema({
     title: String,
-    userName: String,
-    githubRepo: {
-        repo: String,
-        description: String,
-        url: String
-    },
-    content: String
+    githubusername: String,
+    content: String,
+    repoName: String
 });
 
 const Note = mongoose.model("Note", notesSchema);
