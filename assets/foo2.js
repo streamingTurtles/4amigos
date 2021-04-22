@@ -4,10 +4,6 @@ import axios from "axios"
 // import REPOApp from "../utils/REPOApp";
 import REPOList from "../components/REPOList";
 import REPOLoading from "../components/REPOLoading";
-// import RepoDetails from "./components/RepoDetails.js";
-
-
-
 
 
 function BlogNoteAdd() {
@@ -21,38 +17,24 @@ function BlogNoteAdd() {
  
 
 
-    // function handleSubmitGitHub(){}
+    function handleSubmitGitHub(){}
+    // function handleSubmitGitHub(e, username){
+    //     e.preventDefault();
+    //     // REPOApp();
+    //     // GitHub endpoint, dynamically passing in specified username
+    //     const apiurl = `https://api.github.com/users/${username}/repos?per_page=30`;
+    //     axios.get(apiurl)
+    //          .then(res =>{
+    //              const repoResults = res.data;
+    //              const results = repoResults.map(noteModel.gitHubRepo =>{
+
+    //              })
+    //          })
 
 
 
-    const [username, setUsername] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [repos, setRepos] = useState([]);
-
-    function handleSubmit(e){
-        e.preventDefault();
-        searchRepos();
-    }
-    function searchRepos(){
-        setLoading(true);
-        axios({
-            method: "get",
-            url: `https://api.github.com/users/${username}/repos?per_page=2`,
-        }).then(res => {
-            setLoading(false);
-            setRepos(res.data)
-        });
-    }
-    function renderRepo(repo){
-        return(
-            <div className="row" key={repo.id}>
-                <h2 className="repo-name">
-                    {repo.name}
-                </h2>
-            </div>
-        )
-    }
-
+  
+    // }
 
 
 
@@ -68,8 +50,6 @@ function BlogNoteAdd() {
             }
         })
     }
-
-
 
     
     function handleClick(event){
@@ -90,7 +70,6 @@ function BlogNoteAdd() {
         // make sure to specify this address in our noteRoute.js file
     }
     
-
      
     return <div className='container'>
         <h1>Members can add a note to the blog here:</h1>
@@ -101,28 +80,31 @@ function BlogNoteAdd() {
 
 
             <div className='form-group'>
-                {/* <input 
+                <input 
                     onChange={handleChange} 
+                    // onChange={e => setUsername(e.target.value)}
                     name="repolink" 
                     value={input.githubusername} 
                     autoComplete="off" 
                     className="form-control" 
-                    placeholder="gitHub Username Here"></input> */}
+                    placeholder="gitHub Username Here"></input>
                 <input 
-                    className='input'
-                    value={username} 
-                    placeholder="GitHub Username"
-                    onChange={e => setUsername(e.target.value)}></input>
-                <button 
-                    // className="btn btn-primary ml-2 mb-5"
+                    type="submit" 
+                    className="btn btn-primary ml-2 mb-5" 
+                    value="CLICK HERE TO GET MY REPO" 
+                    onClick={handleSubmitGitHub("streamingturtles")}></input>
+                {/* <button 
                     className="button"
-                    onClick={handleSubmit}>{loading ? "Searching..." : "Search"}     
-                </button>
+                    onClick={handleSubmit}>{loading ? "Searching..." : "Search"}    
+                </button> */}
                 {/* <ul id="userRepos"className="list-group mx-auto mb-5"></ul> */}
-                <div className="results-container">
-                    {repos.map(renderRepo)}
-                </div>
-            </div>
+            </div> 
+                {/* <div className='repo-container'>
+                <Loading isLoading={appState.loading} repos={appState.repos} />
+                </div> */}
+
+
+
 
 
             <div className='form-group'>

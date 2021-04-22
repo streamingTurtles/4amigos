@@ -6,7 +6,7 @@ import REPOList from '../components/REPOList';
 import REPOLoading from '../components/REPOLoading';
 
 
-function REPOAppy() {
+function REPOApp() {
   const Loading = REPOLoading(REPOList);
   const [appState, setAppState] = useState({
     loading: false,
@@ -33,5 +33,5 @@ function REPOAppy() {
     </div>
   );
 }
-export default REPOAppy;
+export default REPOApp;
 
