@@ -17,5 +17,4 @@ export default function ListResources (props){
                 {resourceList}
             </div>
         )
-    
 }
