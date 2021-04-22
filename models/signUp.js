@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const signUpSchema = new Schema({
-  _id: { type: String},
+  // _id: { type: String},  dont need automatically created for us
   name: { type: String},
   repo: { type: Array},
   description: String,
