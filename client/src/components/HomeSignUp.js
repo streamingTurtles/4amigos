@@ -7,11 +7,11 @@ function HomeSignUp(){
     return (
         <div>
             <h1>Home</h1>
-            <div class ="container-fluid">
-                <div class = "row">
-                    <div class = "col-md-2"></div>
-                    <div class = "col-md-8"></div>
-                    <div class = "col-md-2">
+            <div className ="container-fluid">
+                <div className = "row">
+                    <div className = "col-md-2"></div>
+                    <div className = "col-md-8"></div>
+                    <div className = "col-md-2">
                         {resources.map((resource,index) => {
                             console.log(resource)
                             return (

@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import HomeSignUp from "./components/HomeSignUp"
 import BlogNoteAdd from "./components/BlogNoteAdd"
 import BlogNotesAll from "./components/BlogNotesAll"
-import Resources from "./components/Resources"
+// import Resources from "./components/Resources"
 
 
 
