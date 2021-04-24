@@ -2,7 +2,18 @@ const express = require("express");
 const router = express.Router();
 const Note = require("../models/noteModel");
 // const Blog = require("../../models/blogNoteRepoModel");
-
+router.route("/notes/delete/:id").delete((req,res)=>{
+    console.log(req.params)
+    Note.deleteOne({_id:req.params.id},(error)=>{
+        if(error){
+            console.log(error)
+            res.sendStatus(400)
+        }else{
+            res.sendStatus(204)
+        }
+    })
+  
+})
 
 // specify here the address where we sent our newNote
 // its the http://localhost:3001/create  address
