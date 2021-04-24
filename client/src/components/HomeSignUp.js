@@ -7,6 +7,7 @@ var colors=["red","blue","green","orange"]
 const style = {
     content: {
       padding: 30,
+      float:"left",
       width: 500,
       borderStyle: "outset",
       background:"rgb(255,255,255,0.8)"
@@ -59,22 +60,22 @@ function HomeSignUp(){
                 <div className="App">
                     <h1>Register</h1>
                     <input placeholder="username" onChange={e => setRegisterUsername(e.target.value)}/>
-                    <input placeholder="password" onChange={e => setRegisterPassword(e.target.value)}/>
-                    <button onClick={register}>Submit</button>
-                </div>
-                <div className="App">
+                    <input placeholder="password" type="password" onChange={e => setRegisterPassword(e.target.value)}/>
+                    <button onClick={register}>Submit</button> 
                     <h1>Login</h1>
                     <input placeholder="username" onChange={e => setLoginUsername(e.target.value)}/>
-                    <input placeholder="password" onChange={e => setLoginPassword(e.target.value)}/>
+                    <input placeholder="password" type="password" onChange={e => setLoginPassword(e.target.value)}/>
                     <button onClick={login}>Submit</button>
                 </div>
+
                 <div className="App">
                     <h1>Get User</h1>
                     <button onClick={getUser}>Submit</button>
                     {data ? <h1>Welcome Back {data.username}</h1> : null}
                 </div>
                 </div>
-            <div className ="container-fluid" style={{position: 'absolute',top: '100px'}}>
+                
+            <div style={{top:"0px", overflow: 'scroll',height:800}}>
                 <div className = "row">
                     <div className = "col-md-2"></div>
                     <div className = "col-md-8"></div>
@@ -87,7 +88,8 @@ function HomeSignUp(){
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+        
     )
 }
 export default HomeSignUp;

@@ -36,7 +36,7 @@ function BlogNotesAll() {
  <h1 style={{position: 'sticky',top: '0px',backgroundColor:"white"}}>Here are all the blog notes</h1>
          
         {
-        notes.map(note =>
+        notes.reverse().map(note =>
         <div key={note._id}>
             <div><h2>{note.title}</h2></div>
             <div><p>{note.githubusername}</p></div>
