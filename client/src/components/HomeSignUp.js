@@ -22,7 +22,7 @@ function HomeSignUp(){
     const [data, setData] = useState(null);
     const register = () => {
         axios({
-            method: "POST",
+            method: "post",
             data: {
                 username: registerUsername,
                 password: registerPassword
@@ -33,7 +33,7 @@ function HomeSignUp(){
     };
     const login = () => {
         axios({
-            method: "POST",
+            method: "post",
             data: {
                 username: loginUsername,
                 password: loginPassword,
@@ -44,7 +44,7 @@ function HomeSignUp(){
     };
     const getUser = () => {
         axios({
-            method: "GET",
+            method: "get",
             withCredentials: true,
             url: "http://localhost:3000/user",
         }).then((res) => {
@@ -71,7 +71,7 @@ function HomeSignUp(){
                 <div className="App">
                     <h1>Get User</h1>
                     <button onClick={getUser}>Submit</button>
-                    {data ? <h1>Welcome Back {data.username}</h1> : null}
+                    {data ? <h1>Your Signed in {data.username}</h1> : null}
                 </div>
                 </div>
                 
