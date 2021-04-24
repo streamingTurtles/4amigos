@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const blogNoteRepoSchema = new Schema ({
     _id: {type: String},
     title: String,
-    repolink: String,
+    // repolink: String,
+    githubusername: String,
     content: String
 });
 

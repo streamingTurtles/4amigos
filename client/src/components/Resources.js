@@ -1,6 +1,8 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
 
 function Resources() {
+
     return <div className='container'>
         <h1>Full Stack Resources</h1>
     </div>
@@ -8,9 +10,13 @@ function Resources() {
 }
 
 // export default Resources;
-export default
+export default Resources
+
+
 
 [
+    
+    
     {
         "title":"Resources-Code-Practice",
         "resources":[{

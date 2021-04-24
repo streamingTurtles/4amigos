@@ -1,27 +1,36 @@
 import React from "react";
+// import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomeSignUp from "./components/HomeSignUp"
 import BlogNoteAdd from "./components/BlogNoteAdd"
 import BlogNotesAll from "./components/BlogNotesAll"
-// import Resources from "./components/Resources"
-
+// import Resources from "./components/Resources";
 
 
 // import './App.css';
 
 
 function App() {
-  return (
-    
-    
+  // const [registerUsername, setRegisterUsername] = useState("");
+  // const [registerPassword, setRegisterPassword] = useState("");
+  // const [loginUsername, setLoginUsername] = useState("");
+  // const [loginPassword, setLoginPassword] = useState("");
+  // const register = () => {};
+  // const login = () => {};
+  // const getUser = () => {};
+
+  return (      
     
     <Router>
-      <NavBar ></NavBar>
-        
       
-        
-
+      <NavBar ></NavBar>
+        {/* <div><h4>-- TOP --</h4></div>
+        <div className="App">
+          <h1>Register</h1>
+          <input placeholder="username" onChange={e => setRegisterUsername(e.target.value)}/>
+          <input placeholder="password" onChange={e => setRegisterPassword(e.target.value)}/>
+        </div> */}
           <Route path = "/" exact>
               <HomeSignUp/>
           </Route>
@@ -37,13 +46,18 @@ function App() {
         
           <Route path = "/blognotesall">
             <BlogNotesAll/>
-          </Route>
-
-       
-        
-      
-        
+          </Route>     
+        {/* <div><h4>-- BOTTOM --</h4></div> */}
     </Router>
+
+
+    
+
+
+
+
+
+
 
   );
 }

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Blog = require("../../models/blogNoteRepoModel");
+const Blog = require("../../models/_blogNoteRepoModel");
 
 
 router.route("/create").post((req, res) => {
