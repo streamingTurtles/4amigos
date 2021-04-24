@@ -3,19 +3,16 @@ import React, { useState } from "react";
 import ListResources from "./ListResources"
 import resources from "../resources"
 import axios from "axios";
-
-
-
 var colors=["red","blue","green","orange"]
 const style = {
-    content: {   
-      width: 700,
-      height:500,
+    content: {
+      padding: 30,
+      width: 500,
       borderStyle: "outset",
-      overflow: 'scroll',
       background:"rgb(255,255,255,0.8)"
     },
   };
+
 function HomeSignUp(){
     console.log (resources)
     const [registerUsername, setRegisterUsername] = useState("");
@@ -23,7 +20,6 @@ function HomeSignUp(){
     const [loginUsername, setLoginUsername] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
     const [data, setData] = useState(null);
-    
     const register = () => {
         axios({
             method: "POST",
@@ -56,12 +52,10 @@ function HomeSignUp(){
             console.log(res.data);
           });
     };
-
     return (
         <div>
-
-    <div style={style.content}>
-                <h1>SignUp</h1>
+            <div style={style.content}>
+                <h1>Home/SignUp</h1>
                 <div className="App">
                     <h1>Register</h1>
                     <input placeholder="username" onChange={e => setRegisterUsername(e.target.value)}/>
@@ -79,31 +73,21 @@ function HomeSignUp(){
                     <button onClick={getUser}>Submit</button>
                     {data ? <h1>Welcome Back {data.username}</h1> : null}
                 </div>
-
-         </div>
-
-
+                </div>
             <div className ="container-fluid" style={{position: 'absolute',top: '100px'}}>
-                <div className = "row"  style={{height:800,overflow: 'scroll'}}>
+                <div className = "row">
                     <div className = "col-md-2"></div>
                     <div className = "col-md-8"></div>
                     <div className = "col-md-2">
                         {resources.map((resource,index) => {
                             console.log(resource)
                             return (
-                                 <div>
                             <ListResources currentColor={colors[index]} resourceList={resource.resources} title={resource.title}/>
-                            </div>
                         )})}
-                
                     </div>
                 </div>
             </div>
-            
- 
- </div>
-        
+        </div>
     )
 }
-
 export default HomeSignUp;
