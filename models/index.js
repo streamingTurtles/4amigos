@@ -1,3 +1,3 @@
-module.exports = {
-    SignUp: require("./SignUp")
-  };
+// module.exports = {
+//     SignUp: require("./SignUp")
+//   };

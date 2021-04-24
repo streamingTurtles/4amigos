@@ -25,6 +25,7 @@ router.route("/create").post((req, res) => {
 // another routed needed to now get from the DB to show 
 // on the frontend.  This time it will be a get request since
 // we are retreving from the db.
+// ??? /notes, "notes" is the name of the collection in the mongo Atlas cloud db  ???
 router.route("/notes").get((req, res) =>{
     Note.find()
         .then(foundNotes => res.json(foundNotes))

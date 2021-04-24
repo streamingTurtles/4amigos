@@ -9,4 +9,6 @@ router
   .route("/:id")
   .delete(signUpController.remove);
 
+// router.get('/', (req,res) => res.send('Make a Dent'));    
+
 module.exports = router;
