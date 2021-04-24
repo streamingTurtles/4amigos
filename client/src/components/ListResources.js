@@ -5,7 +5,7 @@ export default function ListResources (props){
        
         const resourceList = props.resourceList.map(resource => {
             return (
-                <a style={{color:`${props.currentColor}`}}href={resource.link} target="_blank" class="list-group-item list-group-item-action ">{resource.displayName}</a>    
+                <a style={{color:`${props.currentColor}`,}}href={resource.link} target="_blank" class="list-group-item list-group-item-action ">{resource.displayName}</a>    
             )
                     
                 

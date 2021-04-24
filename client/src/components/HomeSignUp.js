@@ -7,7 +7,6 @@ var colors=["red","blue","green","orange"]
 const style = {
     content: {
       padding: 30,
-      float:"left",
       width: 500,
       borderStyle: "outset",
       background:"rgb(255,255,255,0.8)"
@@ -55,7 +54,8 @@ function HomeSignUp(){
     };
     return (
         <div>
-            <div style={style.content}>
+        <div className = "row row justify-content-between">
+            <div className = "col-md-4" style={style.content}>
                 <h1>Home/SignUp</h1>
                 <div className="App">
                     <h1>Register</h1>
@@ -75,10 +75,9 @@ function HomeSignUp(){
                 </div>
                 </div>
                 
-            <div style={{top:"0px", overflow: 'scroll', height:800}}>
-                <div className = "row">
-<div className = "col-md-6"></div>
-                    <div className = "col-md-6">
+            <div style={{overflow: 'scroll', height:700}}>
+                
+                    <div className = "col">
                         {resources.map((resource,index) => {
                             console.log(resource)
                             return (
