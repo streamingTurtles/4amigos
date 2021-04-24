@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import axios from "axios"
 // import GitRepo from "./GitRepo";
 // import
 import Draggable from 'react-draggable';
@@ -19,11 +20,14 @@ function BlogNotesAll() {
 
     useEffect(() => {
         fetch("/notes").then(res => {
+            console.log(res)
             if(res.ok){
                 return res.json()
             }
-        }).then(jsonRes => setNotes(jsonRes));
-    })  
+        }).then(jsonRes => {
+            console.log(jsonRes)
+            setNotes(jsonRes)});
+    },[])  
 
 
 
@@ -42,6 +46,23 @@ function BlogNotesAll() {
             <div><p>{note.githubusername}</p></div>
             <div><p>{note.repoName}</p></div>            
             <div><p>{note.content}</p></div>
+            <button onClick={()=>{
+                 axios({
+                    method: "delete",
+                    url: `/notes/delete/${note._id}`,
+                }).then(res => {
+                    console.log(res);
+                    fetch("/notes").then(res => {
+                        console.log(res)
+                        if(res.ok){
+                            return res.json()
+                        }
+                    }).then(jsonRes => {
+                        console.log(jsonRes)
+                        setNotes(jsonRes)});
+                    
+                });  
+            }}>Delete</button>
         </div>       
         
         )}
