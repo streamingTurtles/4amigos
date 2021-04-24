@@ -28,8 +28,7 @@ function HomeSignUp(){
                 password: registerPassword
             },
             withCredentials: true,
-            // url: "http://localhost:3000/register",
-            url: "/register",
+            url: "http://localhost:3000/register",
         }).then((res) => console.log(res));
     };
     const login = () => {
@@ -40,16 +39,14 @@ function HomeSignUp(){
                 password: loginPassword,
             },
             withCredentials: true,
-            // url: "http://localhost:3000/login",
-            url: "/login",
+            url: "http://localhost:3000/login",
         }).then((res) => console.log(res));
     };
     const getUser = () => {
         axios({
             method: "get",
             withCredentials: true,
-            // url: "http://localhost:3000/user",
-            url: "/user",
+            url: "http://localhost:3000/user",
         }).then((res) => {
             setData(res.data);
             console.log(res.data);
