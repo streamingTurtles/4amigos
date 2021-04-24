@@ -75,11 +75,10 @@ function HomeSignUp(){
                 </div>
                 </div>
                 
-            <div style={{top:"0px", overflow: 'scroll',height:800}}>
+            <div style={{top:"0px", overflow: 'scroll', height:800}}>
                 <div className = "row">
-                    <div className = "col-md-2"></div>
-                    <div className = "col-md-8"></div>
-                    <div className = "col-md-2">
+<div className = "col-md-6"></div>
+                    <div className = "col-md-6">
                         {resources.map((resource,index) => {
                             console.log(resource)
                             return (

@@ -12,7 +12,7 @@ export default function ListResources (props){
         })
         return (
             <div className="list-group mb-3">
-                <a  style ={{backgroundColor:"blue",color:"white",fontSize:"22px"}}href="#" class="list-group-item list-group-item-action">{props.title}</a>
+                <a  style ={{backgroundColor:"#6d77ff",color:"white",fontSize:"22px"}}href="#" class="list-group-item list-group-item-action">{props.title}</a>
 
                 {resourceList}
             </div>
