@@ -7,11 +7,10 @@ import REPOList from "../components/REPOList";
 import REPOLoading from "../components/REPOLoading";
 // import RepoDetails from "./components/RepoDetails.js";
 
-import Draggable from 'react-draggable';
+
 
 const style = {
     content: {
-      margin: 50,
       padding: 30,
       width: 500,
       borderStyle: "outset",
@@ -103,7 +102,6 @@ function BlogNoteAdd() {
 
      
     return (
-        <Draggable bounds="parent">
             <div className='container' style={style.content}>
         <h1>Members can add a note to the blog here:</h1>
         <form>
@@ -151,7 +149,7 @@ function BlogNoteAdd() {
 
 
     </div>
-    </Draggable>)
+    )
 }
 
 export default BlogNoteAdd;

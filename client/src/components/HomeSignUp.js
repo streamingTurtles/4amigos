@@ -3,13 +3,12 @@ import React, { useState } from "react";
 import ListResources from "./ListResources"
 import resources from "../resources"
 import axios from "axios";
-import Draggable from 'react-draggable';
+
+
 
 var colors=["red","blue","green","orange"]
 const style = {
-    content: {
-      margin: 50,
-      
+    content: {   
       width: 700,
       height:500,
       borderStyle: "outset",
@@ -17,7 +16,6 @@ const style = {
       background:"rgb(255,255,255,0.8)"
     },
   };
-
 function HomeSignUp(){
     console.log (resources)
     const [registerUsername, setRegisterUsername] = useState("");
@@ -61,7 +59,7 @@ function HomeSignUp(){
 
     return (
         <div>
-<Draggable bounds="parent">
+
     <div style={style.content}>
                 <h1>SignUp</h1>
                 <div className="App">
@@ -83,10 +81,10 @@ function HomeSignUp(){
                 </div>
 
          </div>
-</Draggable>
 
-            <div className ="container-fluid" style={{position: 'absolute',top: '80px'}}>
-                <div className = "row">
+
+            <div className ="container-fluid" style={{position: 'absolute',top: '100px'}}>
+                <div className = "row"  style={{height:800,overflow: 'scroll'}}>
                     <div className = "col-md-2"></div>
                     <div className = "col-md-8"></div>
                     <div className = "col-md-2">

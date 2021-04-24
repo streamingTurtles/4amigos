@@ -6,8 +6,6 @@ import Draggable from 'react-draggable';
 // import
 const style = {
     content: {
-      margin: 50,
-
       width: 700,
       height:500,
       borderStyle: "outset",
@@ -30,13 +28,12 @@ function BlogNotesAll() {
 
 
     return (
-        <div>
-        <h1>Here are all the blog notes</h1>
+        
+       
         <Draggable bounds="parent">
         <div className='container' style={style.content}>
-    <div className='container'>
        
-
+ <h1 style={{position: 'sticky',top: '0px',backgroundColor:"white"}}>Here are all the blog notes</h1>
          
         {
         notes.map(note =>
@@ -51,9 +48,8 @@ function BlogNotesAll() {
         
 
     </div>
-    </div>
     </Draggable>
-    </div>)
+    )
 
 }
 
