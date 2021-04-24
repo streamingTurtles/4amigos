@@ -3,7 +3,20 @@ import React, { useState } from "react";
 import ListResources from "./ListResources"
 import resources from "../resources"
 import axios from "axios";
+import Draggable from 'react-draggable';
+
 var colors=["red","blue","green","orange"]
+const style = {
+    content: {
+      margin: 50,
+      
+      width: 700,
+      height:500,
+      borderStyle: "outset",
+      overflow: 'scroll',
+      background:"rgb(255,255,255,0.8)"
+    },
+  };
 
 function HomeSignUp(){
     console.log (resources)
@@ -47,9 +60,10 @@ function HomeSignUp(){
     };
 
     return (
-
         <div>
-                <h1>Home/SignUp</h1>
+<Draggable bounds="parent">
+    <div style={style.content}>
+                <h1>SignUp</h1>
                 <div className="App">
                     <h1>Register</h1>
                     <input placeholder="username" onChange={e => setRegisterUsername(e.target.value)}/>
@@ -68,9 +82,10 @@ function HomeSignUp(){
                     {data ? <h1>Welcome Back {data.username}</h1> : null}
                 </div>
 
+         </div>
+</Draggable>
 
-
-            <div className ="container-fluid">
+            <div className ="container-fluid" style={{position: 'absolute',top: '80px'}}>
                 <div className = "row">
                     <div className = "col-md-2"></div>
                     <div className = "col-md-8"></div>
@@ -78,14 +93,18 @@ function HomeSignUp(){
                         {resources.map((resource,index) => {
                             console.log(resource)
                             return (
+                                 <div>
                             <ListResources currentColor={colors[index]} resourceList={resource.resources} title={resource.title}/>
+                            </div>
                         )})}
                 
                     </div>
                 </div>
             </div>
             
-        </div>
+ 
+ </div>
+        
     )
 }
 
