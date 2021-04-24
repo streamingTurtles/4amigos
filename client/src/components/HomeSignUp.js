@@ -1,6 +1,8 @@
 import React from "react"
 import ListResources from "./ListResources"
 import resources from "../resources"
+
+
 var colors=["red","blue","green","orange"]
 function HomeSignUp(){
     console.log (resources)
@@ -15,7 +17,9 @@ function HomeSignUp(){
                         {resources.map((resource,index) => {
                             console.log(resource)
                             return (
+                                 <div>
                             <ListResources currentColor={colors[index]} resourceList={resource.resources} title={resource.title}/>
+                            </div>
                         )})}
                 
                     </div>

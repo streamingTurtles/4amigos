@@ -24,7 +24,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.12.5"
+    "mongoose": "^5.12.5",
+    "react-draggable": "^4.4.3"
   },
   "engines": {
     "node": "14.16.0"
