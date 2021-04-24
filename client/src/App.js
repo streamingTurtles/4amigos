@@ -9,7 +9,7 @@ import './_App.css';
 
 
 function App(props) {
-  const [bg, setFile] = useState('../public/default.png');
+  const [bg, setFile] = useState('../bg.png');
   function onChange(event) {
     var bgurl=URL.createObjectURL(event.target.files[0])
     setFile(bgurl);
