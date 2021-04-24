@@ -1,3 +1,4 @@
+
 // import React, {useState} from "react";
 import React, {useEffect, useState} from "react";
 import axios from "axios"
@@ -8,6 +9,14 @@ import REPOLoading from "../components/REPOLoading";
 
 
 
+const style = {
+    content: {
+      padding: 30,
+      width: 500,
+      borderStyle: "outset",
+      background:"rgb(255,255,255,0.8)"
+    },
+  };
 
 
 function BlogNoteAdd() {
@@ -92,7 +101,8 @@ function BlogNoteAdd() {
     
 
      
-    return <div className='container'>
+    return (
+            <div className='container' style={style.content}>
         <h1>Members can add a note to the blog here:</h1>
         <form>
             <div className='form-group'>
@@ -139,9 +149,9 @@ function BlogNoteAdd() {
 
 
     </div>
+    )
 }
 
 export default BlogNoteAdd;
 
 
-         

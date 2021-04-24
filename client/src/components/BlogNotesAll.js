@@ -1,7 +1,18 @@
 import React, {useEffect, useState} from "react";
 // import GitRepo from "./GitRepo";
 // import
-
+import Draggable from 'react-draggable';
+// import GitRepo from "./GitRepo";
+// import
+const style = {
+    content: {
+      width: 700,
+      height:500,
+      borderStyle: "outset",
+      overflow: 'scroll',
+      background:"rgb(255,255,255,0.8)"
+    },
+  };
 function BlogNotesAll() {
 
     const [notes, setNotes] = useState([])
@@ -16,9 +27,13 @@ function BlogNotesAll() {
 
 
 
-    return <div className='container'>
-        <h1>Here are all the blog notes</h1>
-
+    return (
+        
+       
+        <Draggable bounds="parent">
+        <div className='container' style={style.content}>
+       
+ <h1 style={{position: 'sticky',top: '0px',backgroundColor:"white"}}>Here are all the blog notes</h1>
          
         {
         notes.map(note =>
@@ -33,7 +48,10 @@ function BlogNotesAll() {
         
 
     </div>
+    </Draggable>
+    )
 
 }
+
 
 export default BlogNotesAll;

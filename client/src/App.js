@@ -1,36 +1,28 @@
-import React from "react";
-// import React, { useState } from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomeSignUp from "./components/HomeSignUp"
 import BlogNoteAdd from "./components/BlogNoteAdd"
 import BlogNotesAll from "./components/BlogNotesAll"
-// import Resources from "./components/Resources";
+import Resources from "./components/Resources"
+import './_App.css';
 
 
-// import './App.css';
+function App(props) {
+  const [bg, setFile] = useState('../public/default.png');
+  function onChange(event) {
+    var bgurl=URL.createObjectURL(event.target.files[0])
+    setFile(bgurl);
+  }
 
-
-function App() {
-  // const [registerUsername, setRegisterUsername] = useState("");
-  // const [registerPassword, setRegisterPassword] = useState("");
-  // const [loginUsername, setLoginUsername] = useState("");
-  // const [loginPassword, setLoginPassword] = useState("");
-  // const register = () => {};
-  // const login = () => {};
-  // const getUser = () => {};
-
-  return (      
+  return (
+    
+    
     
     <Router>
-      
-      <NavBar ></NavBar>
-        {/* <div><h4>-- TOP --</h4></div>
-        <div className="App">
-          <h1>Register</h1>
-          <input placeholder="username" onChange={e => setRegisterUsername(e.target.value)}/>
-          <input placeholder="password" onChange={e => setRegisterPassword(e.target.value)}/>
-        </div> */}
+      <NavBar onChange={onChange}></NavBar>
+        <div id="container" style={{backgroundSize:"cover", backgroundImage:`url(`+bg+`)`, margin:0}}>
+        
           <Route path = "/" exact>
               <HomeSignUp/>
           </Route>
@@ -46,8 +38,12 @@ function App() {
         
           <Route path = "/blognotesall">
             <BlogNotesAll/>
-          </Route>     
-        {/* <div><h4>-- BOTTOM --</h4></div> */}
+          </Route>
+
+       
+          </div>
+      
+        
     </Router>
 
 
