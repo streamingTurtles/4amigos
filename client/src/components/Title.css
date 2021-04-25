@@ -1,10 +1,15 @@
+.logo {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
 .title {
   font-size: 65px;
   color: black;
   font-weight: 600;
   font-family: "Press Start 2P", cursive;
   padding-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   border: 5px solid whitesmoke;
   background-color: white;
   display: flex;

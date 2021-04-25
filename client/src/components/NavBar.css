@@ -1,12 +1,14 @@
 .nav-title {
   color: white;
   font-family: "Press Start 2P", cursive;
-  font-size: 22px;
+  font-size: 26px;
+  margin-top: 1rem;
+  margin-right: auto;
 }
 .nav-link {
   color: white;
   font-family: "Noto", Courier, monospace;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .link:hover {

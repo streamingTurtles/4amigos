@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import {NavLink} from "react-router-dom"
 import "./NavBar.css";
+import logo from "/Users/nataliacarvajal/Desktop/gitrepos/FULLSTACKERS/4amigos/client/src/img/blue.png";
 
 // function NavBar(){
 //     return <nav className="navbar bg-dark link">
@@ -14,6 +15,9 @@ import "./NavBar.css";
 function NavBar(props) {
   return (
     <nav className="navbar bg-dark link ">
+      <div className="logo">
+        <img src={logo} alt="logo" className="img-fluid"></img>
+      </div>{" "}
       <h4 className="nav-title">FULLSTACKERS</h4>
       <h4>
         <Link className="nav-link link" to="/">
@@ -28,7 +32,7 @@ function NavBar(props) {
       </h4>
       <h4>
         <Link className="nav-link link" to="/blognotesall">
-          Blog
+          Read the Blog
         </Link>
       </h4>
       {/* <div>
