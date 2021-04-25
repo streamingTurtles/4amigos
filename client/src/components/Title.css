@@ -1,0 +1,16 @@
+.title {
+  font-size: 65px;
+  color: black;
+  font-weight: 600;
+  font-family: "Press Start 2P", cursive;
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+  border: 5px solid whitesmoke;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-left: 18rem;
+  width: 60%;
+  padding: 0em 5em;
+  border-radius: 16px;
+}
