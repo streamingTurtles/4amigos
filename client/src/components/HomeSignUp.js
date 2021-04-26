@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ListResources from "./ListResources";
 import resources from "../resources";
 import axios from "axios";
+import "./HomeSignUp.css";
 var colors = ["red", "blue", "green", "orange"];
 const style = {
   content: {
@@ -59,36 +60,38 @@ function HomeSignUp() {
     <div>
       <div className="row row justify-content-between">
         <div className="col-md-4" style={style.content}>
-          <h1>SignUp</h1>
+          <h1 className="signUp-title text-center">Welcome!</h1>
           <div className="App">
-            <h1>Register</h1>
+            <h1 className="sub-titles">Would you like to register?</h1>
             <input
-              placeholder="username"
+              placeholder="Username"
               onChange={(e) => setRegisterUsername(e.target.value)}
             />
             <input
-              placeholder="password"
+              placeholder="Password"
               type="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
-            <button onClick={register}>Submit</button>
-            <h1>Login</h1>
+            <button onClick={register}>Register</button>
+            <h1 className="sub-titles">Have an account already, Login!</h1>
             <input
-              placeholder="username"
+              placeholder="Username"
               onChange={(e) => setLoginUsername(e.target.value)}
             />
             <input
-              placeholder="password"
+              placeholder="Password"
               type="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-            <button onClick={login}>Submit</button>
+            <button onClick={login}>Login</button>
           </div>
 
           <div className="App">
-            <h1>Get User</h1>
+            <h1 className="sub-titles">Get User</h1>
             <button onClick={getUser}>Submit</button>
-            {data ? <h1>Welcome {data.username}!!!</h1> : null}
+            {data ? (
+              <h1>You've Successfully Signed In, {data.username}!!!</h1>
+            ) : null}
           </div>
         </div>
 
