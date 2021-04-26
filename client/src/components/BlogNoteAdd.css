@@ -1,0 +1,21 @@
+.noteadd-title {
+  font-family: "Lora", serif;
+  font-size: 48px;
+}
+#addnote-btn,
+.addsearch-button {
+  font-size: 17px;
+  background-color: white;
+  color: #6d77ff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border-color: #6d77ff;
+}
+.addsearch-button {
+  margin-left: 1rem;
+}
+#addnote-btn:hover,
+.addsearch-button:hover {
+  color: #6d77ff;
+  transform: scale(1.2);
+}

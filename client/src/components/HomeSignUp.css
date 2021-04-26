@@ -1,0 +1,36 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif; 
+font-family: 'Lora', serif;
+*/
+.signUp-title {
+  font-family: "Lora", serif;
+  font-size: 48px;
+}
+.sub-titles {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+.user-input {
+  margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.password-input {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.hsu-btn {
+  font-size: 17px;
+  background-color: white;
+  color: #6d77ff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border-color: #6d77ff;
+  font-family: "Open Sans", sans-serif;
+}
+.hsu-btn:hover {
+  color: #6d77ff;
+  transform: scale(1.2);
+}
