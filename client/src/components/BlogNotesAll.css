@@ -25,10 +25,9 @@ h2 {
   background-color: white;
   color: #6d77ff;
   border-radius: 5px;
-  border-color: #82d696;
+  border-color: #6d77ff;
 }
 .delete-btn:hover {
-  color: #82d696;
-  border-color: #6d77ff;
+  color: #6d77ff;
   transform: scale(1.2);
 }

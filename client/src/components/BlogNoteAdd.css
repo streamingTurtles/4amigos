@@ -4,19 +4,18 @@
 }
 #addnote-btn,
 .addsearch-button {
-  font-size: 19px;
+  font-size: 17px;
   background-color: white;
   color: #6d77ff;
   border-radius: 5px;
   margin-bottom: 1rem;
-  border-color: #82d696;
+  border-color: #6d77ff;
 }
 .addsearch-button {
   margin-left: 1rem;
 }
 #addnote-btn:hover,
 .addsearch-button:hover {
-  color: #82d696;
-  border-color: #6d77ff;
+  color: #6d77ff;
   transform: scale(1.2);
 }
