@@ -16,7 +16,7 @@ import "./NavBar.css";
 function NavBar(props){
     return <nav className="navbar bg-dark link">
         <h4><Link className="nav-link link" to="/" >Home/SignUp Route</Link></h4>
-        {/* <h4><Link className="nav-link link" to="/api" >SignUp Route</Link></h4> */}
+        
         <h4><Link className="nav-link link" to="/blognoteadd">Blog - Add Note</Link></h4>
         <h4><Link className="nav-link link" to="/blognotesall">Blog - All Notes</Link></h4>
    <div>
