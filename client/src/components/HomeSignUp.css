@@ -27,6 +27,7 @@ font-family: 'Lora', serif;
   color: #6d77ff;
   border-radius: 5px;
   margin-bottom: 1rem;
+  border: none;
 }
 .hsu-btn:hover {
   color: #82d696;

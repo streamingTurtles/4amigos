@@ -2,7 +2,8 @@
   font-family: "Lora", serif;
   font-size: 48px;
 }
-#addnote-btn {
+#addnote-btn,
+.addsearch-button {
   font-size: 19px;
   background-color: white;
   color: #6d77ff;
@@ -10,7 +11,11 @@
   margin-bottom: 1rem;
   border: none;
 }
-#addnote-btn:hover {
+.addsearch-button {
+  margin-left: 1rem;
+}
+#addnote-btn:hover,
+.addsearch-button:hover {
   color: #82d696;
   transform: scale(1.2);
 }

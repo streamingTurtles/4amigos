@@ -125,7 +125,7 @@ function BlogNoteAdd() {
           />
           <button
             // className="btn btn-primary ml-2 mb-5"
-            className="button"
+            className="addsearch-button"
             onClick={handleSubmit}
           >
             {loading ? "Searching..." : "Search"}
