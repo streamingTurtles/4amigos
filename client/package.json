@@ -6,6 +6,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.6.0",
+    "framer": "^1.2.29",
+    "framer-motion": "^4.1.9",
     "react": "^16.6.3",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^16.6.3",
