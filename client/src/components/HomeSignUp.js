@@ -116,7 +116,9 @@ function HomeSignUp() {
               Submit
             </button>
             {data ? (
-              <h1 className="sub-titles">You're signed in, {data.username}!</h1>
+              <h1 className="sub-titles text-capitalize">
+                You're Signed In, {data.username}!
+              </h1>
             ) : null}
           </div>
         </motion.div>

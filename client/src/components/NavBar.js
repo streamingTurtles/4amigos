@@ -27,12 +27,12 @@ function NavBar(props) {
       {/* <h4><Link className="nav-link link" to="/api" >SignUp Route</Link></h4> */}
       <h4>
         <Link className="nav-link link" to="/blognoteadd">
-          Add to the Blog
+          Post on the Board
         </Link>
       </h4>
       <h4>
         <Link className="nav-link link" to="/blognotesall">
-          Read the Blog
+          The Board
         </Link>
       </h4>
       {/* <div>
