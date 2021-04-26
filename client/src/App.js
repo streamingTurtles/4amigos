@@ -8,6 +8,7 @@ import Resources from "./components/Resources";
 import Title from "./components/Title";
 
 import "./_App.css";
+import Footer from "./components/Footer";
 
 function App(props) {
   const [bg, setFile] = useState(
@@ -46,6 +47,7 @@ function App(props) {
           <BlogNotesAll />
         </Route>
       </div>
+      <Footer />
     </Router>
   );
 }
