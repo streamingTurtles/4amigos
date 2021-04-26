@@ -1,0 +1,17 @@
+.allNotes-title {
+  font-family: "Lora", serif;
+  font-size: 48px;
+}
+
+.delete-btn {
+  font-size: 19px;
+  background-color: white;
+  color: #6d77ff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: none;
+}
+s .delete-btn:hover {
+  color: #82d696;
+  transform: scale(1.2);
+}

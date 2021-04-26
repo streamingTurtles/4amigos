@@ -6,7 +6,7 @@ import Draggable from "react-draggable";
 // import GitRepo from "./GitRepo";
 // import
 import { motion } from "framer-motion";
-
+import "./BlogNotesAll.css";
 const style = {
   content: {
     width: 700,
@@ -49,8 +49,11 @@ function BlogNotesAll() {
       className="container"
       style={style.content}
     >
-      <h1 style={{ position: "sticky", top: "0px", backgroundColor: "white" }}>
-        Here are all the blog notes
+      <h1
+        className="allNotes-title text-center"
+        style={{ position: "sticky", top: "0px", backgroundColor: "white" }}
+      >
+        Thoughts{" "}
       </h1>
 
       {notes.reverse().map((note) => (
@@ -67,7 +70,7 @@ function BlogNotesAll() {
           <div>
             <p>{note.content}</p>
           </div>
-          <button
+          <button className="delete-btn"
             onClick={() => {
               axios({
                 method: "delete",
