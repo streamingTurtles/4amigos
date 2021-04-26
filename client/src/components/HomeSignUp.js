@@ -8,6 +8,7 @@ var colors = ["red", "blue", "green", "orange"];
 const style = {
   content: {
     padding: 30,
+    height: 500,
     width: 500,
     borderStyle: "outset",
     background: "rgb(255,255,255,0.8)",

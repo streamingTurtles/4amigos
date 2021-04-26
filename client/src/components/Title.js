@@ -5,7 +5,8 @@ function Title() {
   return (
     <div>
       <motion.div
-        animate={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 10 }}
         className="title text-center"
       >
