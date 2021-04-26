@@ -15,7 +15,7 @@
   <!-- - [Github Informaton](#github-repo-link) -->
   <!-- - [Github Link to our application](#github-information) -->
   <!-- - [my-email-for-questions-and-information](#my-email-for-questions-and-information) -->
-  
+
 
 
 
@@ -43,6 +43,7 @@
   - - -
   ## Installation Instructions:
   - The user only has to follow the Heroku Deployed Application link https://secure-beach-29567.herokuapp.com/  or can run the application locally from the terminal by first running >npm i to get all dependencies and then to begin the app, type:  >npm start  and the Employee Directory App will open in the browser.  
+
 
   &nbsp;
   - - -
