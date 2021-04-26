@@ -67,10 +67,11 @@ function BlogNotesAll() {
           <div>
             <p>{note.repoName}</p>
           </div>
-          <div>
+          <div id="description">
             <p>{note.content}</p>
           </div>
-          <button className="delete-btn"
+          <button
+            className="delete-btn"
             onClick={() => {
               axios({
                 method: "delete",

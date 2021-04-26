@@ -2,6 +2,17 @@
   font-family: "Lora", serif;
   font-size: 48px;
 }
+h2 {
+  font-family: "Lora", serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+}
+#description {
+  font-family: "Montserrat", sans-serif;
+}
 
 .delete-btn {
   font-size: 19px;
@@ -9,9 +20,10 @@
   color: #6d77ff;
   border-radius: 5px;
   margin-bottom: 1rem;
-  border: none;
+  border-color: #82d696;
 }
-s .delete-btn:hover {
+.delete-btn:hover {
   color: #82d696;
+  border-color: #6d77ff;
   transform: scale(1.2);
 }
