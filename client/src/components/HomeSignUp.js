@@ -76,9 +76,10 @@ function HomeSignUp() {
           className="col-md-4"
           style={style.content}
         >
-          <h1 className="signUp-title text-center">Welcome!</h1>
+          <h1 className="signUp-title text-center">Inspire. Connect.</h1>
+          <hr></hr>
           <div className="App">
-            <h1 className="sub-titles">Would you like to register?</h1>
+            <h1 className="sub-titles">Create your account</h1>
             <input
               className="user-input"
               placeholder="Username"
@@ -93,7 +94,7 @@ function HomeSignUp() {
             <button className="hsu-btn" onClick={register}>
               Register
             </button>
-            <h1 className="sub-titles">Have an account already, Login!</h1>
+            <h1 className="sub-titles">Log in to FULLSTACKERS</h1>
             <input
               className="user-input"
               placeholder="Username"
