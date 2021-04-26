@@ -94,7 +94,7 @@ function HomeSignUp() {
             <button className="hsu-btn" onClick={register}>
               Register
             </button>
-            <h1 className="sub-titles">Log in to FULLSTACKERS</h1>
+            <h1 className="sub-titles">Log in to FullStackers</h1>
             <input
               className="user-input"
               placeholder="Username"
@@ -117,7 +117,7 @@ function HomeSignUp() {
               Submit
             </button>
             {data ? (
-              <h1 className="sub-titles ">
+              <h1 className="sub-titles text-capitalize">
                 You're Signed In, {data.username}!
               </h1>
             ) : null}
