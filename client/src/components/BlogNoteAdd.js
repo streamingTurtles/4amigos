@@ -157,3 +157,4 @@ function BlogNoteAdd() {
 }
 
 export default BlogNoteAdd;
+// line151:className="btn btn-lg btn-info"
