@@ -9,7 +9,7 @@
   color: #6d77ff;
   border-radius: 5px;
   margin-bottom: 1rem;
-  border: none;
+  border-color: #82d696;
 }
 .addsearch-button {
   margin-left: 1rem;
@@ -17,5 +17,6 @@
 #addnote-btn:hover,
 .addsearch-button:hover {
   color: #82d696;
+  border-color: #6d77ff;
   transform: scale(1.2);
 }

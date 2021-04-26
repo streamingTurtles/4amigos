@@ -94,7 +94,7 @@ function BlogNoteAdd() {
       className="container"
       style={style.content}
     >
-      <h1 className="noteadd-title">Stackers Thoughts:</h1>
+      <h1 className="noteadd-title">Post to the Board:</h1>
       <form>
         <div className="form-group">
           <input
@@ -148,12 +148,8 @@ function BlogNoteAdd() {
           ></textarea>
         </div>
 
-        <button
-          id="addnote-btn"
-          onClick={handleClick}
-          className="btn btn-lg btn"
-        >
-          Add Note
+        <button id="addnote-btn" onClick={handleClick}>
+          Post
         </button>
       </form>
     </motion.div>
