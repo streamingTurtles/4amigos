@@ -94,7 +94,9 @@ function BlogNoteAdd() {
       className="container"
       style={style.content}
     >
-      <h1 className="noteadd-title">Post to the Board:</h1>
+      <h1 className="noteadd-title">Post on the Board:</h1>
+      <hr></hr>
+
       <form>
         <div className="form-group">
           <input

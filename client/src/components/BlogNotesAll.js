@@ -51,10 +51,11 @@ function BlogNotesAll() {
     >
       <h1
         className="allNotes-title text-center"
-        style={{ position: "sticky", top: "0px", backgroundColor: "white" }}
+        // style={{ position: "sticky", top: "0px", backgroundColor: "white" }}
       >
         The Board{" "}
       </h1>
+      <hr></hr>
 
       {notes.reverse().map((note) => (
         <div key={note._id}>
