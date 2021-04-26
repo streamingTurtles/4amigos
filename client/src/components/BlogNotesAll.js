@@ -93,7 +93,7 @@ function BlogNotesAll() {
               });
             }}
           >
-            Delete
+            <i class="fas fa-trash-alt"></i>{" "}
           </button>
           <hr></hr>
         </div>
