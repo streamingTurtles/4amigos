@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import GitRepo from "./GitRepo";
 // import
-import Draggable from "react-draggable";
+// import Draggable from "react-draggable";
 // import GitRepo from "./GitRepo";
 // import
 import { motion } from "framer-motion";
@@ -53,22 +53,22 @@ function BlogNotesAll() {
         className="allNotes-title text-center"
         style={{ position: "sticky", top: "0px", backgroundColor: "white" }}
       >
-        Thoughts{" "}
+        The Board{" "}
       </h1>
 
       {notes.reverse().map((note) => (
         <div key={note._id}>
           <div>
-            <h2>{note.title}</h2>
+            <h2 className="text-capitalize">{note.title}</h2>
           </div>
           <div>
-            <p>{note.githubusername}</p>
+            <p className="notes">{note.githubusername}</p>
           </div>
           <div>
-            <p>{note.repoName}</p>
+            <p className="notes">{note.repoName}</p>
           </div>
           <div id="description">
-            <p>{note.content}</p>
+            <p className="text-capitalize">{note.content}</p>
           </div>
           <button
             className="delete-btn"
@@ -94,6 +94,7 @@ function BlogNotesAll() {
           >
             Delete
           </button>
+          <hr></hr>
         </div>
       ))}
     </motion.div>

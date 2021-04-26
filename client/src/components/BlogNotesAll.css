@@ -7,19 +7,24 @@ h2 {
   font-size: 24px;
   font-weight: 800;
 }
-p {
-  font-family: "Open Sans", sans-serif;
-}
+
 #description {
   font-family: "Montserrat", sans-serif;
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+.notes {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: auto;
 }
 
 .delete-btn {
-  font-size: 19px;
+  font-size: 17px;
   background-color: white;
   color: #6d77ff;
   border-radius: 5px;
-  margin-bottom: 1rem;
   border-color: #82d696;
 }
 .delete-btn:hover {
