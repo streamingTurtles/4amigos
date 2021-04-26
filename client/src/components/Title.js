@@ -7,7 +7,7 @@ function Title() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 10 }}
+        transition={{ duration: 8 }}
         className="title text-center"
       >
         FULLSTACKERS

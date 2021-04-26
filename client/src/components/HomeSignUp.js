@@ -4,17 +4,18 @@ import ListResources from "./ListResources";
 import resources from "../resources";
 import axios from "axios";
 import "./HomeSignUp.css";
+import { motion } from "framer-motion";
+
 var colors = ["red", "blue", "green", "orange"];
 const style = {
   content: {
     padding: 30,
-    height: 500,
+    height: 550,
     width: 500,
     borderStyle: "outset",
     background: "rgb(255,255,255,0.8)",
   },
 };
-
 function HomeSignUp() {
   console.log(resources);
   const [registerUsername, setRegisterUsername] = useState("");
@@ -58,45 +59,69 @@ function HomeSignUp() {
     });
   };
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
       <div className="row row justify-content-between">
-        <div className="col-md-4" style={style.content}>
+        <motion.div
+          drag
+          dragConstraints={{
+            top: -1000,
+            left: -1000,
+            right: 1000,
+            bottom: 1000,
+          }}
+          className="col-md-4"
+          style={style.content}
+        >
           <h1 className="signUp-title text-center">Welcome!</h1>
           <div className="App">
             <h1 className="sub-titles">Would you like to register?</h1>
             <input
+              className="user-input"
               placeholder="Username"
               onChange={(e) => setRegisterUsername(e.target.value)}
             />
             <input
+              className="password-input"
               placeholder="Password"
               type="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
-            <button onClick={register}>Register</button>
+            <button className="hsu-btn" onClick={register}>
+              Register
+            </button>
             <h1 className="sub-titles">Have an account already, Login!</h1>
             <input
+              className="user-input"
               placeholder="Username"
               onChange={(e) => setLoginUsername(e.target.value)}
             />
             <input
+              className="password-input"
               placeholder="Password"
               type="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-            <button onClick={login}>Login</button>
+            <button className="hsu-btn" onClick={login}>
+              Login
+            </button>
           </div>
 
           <div className="App">
             <h1 className="sub-titles">Get User</h1>
-            <button onClick={getUser}>Submit</button>
+            <button className="hsu-btn" onClick={getUser}>
+              Submit
+            </button>
             {data ? (
-              <h1>You've Successfully Signed In, {data.username}!!!</h1>
+              <h1 className="sub-titles">You're signed in, {data.username}!</h1>
             ) : null}
           </div>
-        </div>
+        </motion.div>
 
-        <div style={{ overflow: "scroll", height: 700 }}>
+        <div style={{ overflow: "scroll", height: 550 }}>
           <div className="col">
             {resources.map((resource, index) => {
               console.log(resource);
@@ -111,7 +136,7 @@ function HomeSignUp() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default HomeSignUp;
