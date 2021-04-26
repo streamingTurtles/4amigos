@@ -1,21 +1,11 @@
 // import React from "react";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 function Resources() {
   return (
-    <motion.div
-      drag
-      dragConstraints={{
-        top: -1000,
-        left: -1000,
-        right: 1000,
-        bottom: 1000,
-      }}
-      className="container"
-    >
+    <div className="container">
       <h1>Full Stack Resources</h1>
-    </motion.div>
+    </div>
   );
 }
 

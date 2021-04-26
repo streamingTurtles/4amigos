@@ -71,7 +71,7 @@ function HomeSignUp() {
             top: -1000,
             left: -1000,
             right: 1000,
-            bottom: 1000,
+            bottom: 100,
           }}
           className="col-md-4"
           style={style.content}

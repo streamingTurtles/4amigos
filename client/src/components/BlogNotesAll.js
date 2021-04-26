@@ -34,61 +34,66 @@ function BlogNotesAll() {
   }, []);
 
   return (
-    <Draggable bounds="parent">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="container"
-        style={style.content}
-      >
-        <h1
-          style={{ position: "sticky", top: "0px", backgroundColor: "white" }}
-        >
-          Here are all the blog notes
-        </h1>
+    // <Draggable bounds="parent">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      drag
+      dragConstraints={{
+        top: -1000,
+        left: -1000,
+        right: 1000,
+        bottom: 1000,
+      }}
+      className="container"
+      style={style.content}
+    >
+      <h1 style={{ position: "sticky", top: "0px", backgroundColor: "white" }}>
+        Here are all the blog notes
+      </h1>
 
-        {notes.reverse().map((note) => (
-          <div key={note._id}>
-            <div>
-              <h2>{note.title}</h2>
-            </div>
-            <div>
-              <p>{note.githubusername}</p>
-            </div>
-            <div>
-              <p>{note.repoName}</p>
-            </div>
-            <div>
-              <p>{note.content}</p>
-            </div>
-            <button
-              onClick={() => {
-                axios({
-                  method: "delete",
-                  url: `/notes/delete/${note._id}`,
-                }).then((res) => {
-                  console.log(res);
-                  fetch("/notes")
-                    .then((res) => {
-                      console.log(res);
-                      if (res.ok) {
-                        return res.json();
-                      }
-                    })
-                    .then((jsonRes) => {
-                      console.log(jsonRes);
-                      setNotes(jsonRes);
-                    });
-                });
-              }}
-            >
-              Delete
-            </button>
+      {notes.reverse().map((note) => (
+        <div key={note._id}>
+          <div>
+            <h2>{note.title}</h2>
           </div>
-        ))}
-      </motion.div>
-    </Draggable>
+          <div>
+            <p>{note.githubusername}</p>
+          </div>
+          <div>
+            <p>{note.repoName}</p>
+          </div>
+          <div>
+            <p>{note.content}</p>
+          </div>
+          <button
+            onClick={() => {
+              axios({
+                method: "delete",
+                url: `/notes/delete/${note._id}`,
+              }).then((res) => {
+                console.log(res);
+                fetch("/notes")
+                  .then((res) => {
+                    console.log(res);
+                    if (res.ok) {
+                      return res.json();
+                    }
+                  })
+                  .then((jsonRes) => {
+                    console.log(jsonRes);
+                    setNotes(jsonRes);
+                  });
+              });
+            }}
+          >
+            Delete
+          </button>
+        </div>
+      ))}
+    </motion.div>
+    // </Draggable>
   );
 }
 

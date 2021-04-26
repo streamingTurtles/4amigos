@@ -6,6 +6,7 @@ import REPOList from "../components/REPOList";
 import REPOLoading from "../components/REPOLoading";
 // import RepoDetails from "./components/RepoDetails.js";
 import { motion } from "framer-motion";
+import "./BlogNoteAdd.css";
 
 const style = {
   content: {
@@ -93,7 +94,7 @@ function BlogNoteAdd() {
       className="container"
       style={style.content}
     >
-      <h1>Members can add a note to the blog here:</h1>
+      <h1 className="noteadd-title">Stackers Thoughts:</h1>
       <form>
         <div className="form-group">
           <input
@@ -102,7 +103,7 @@ function BlogNoteAdd() {
             value={input.title}
             autoComplete="off"
             className="form-control"
-            placeholder="blog title"
+            placeholder="Blog Title"
           ></input>
         </div>
 
@@ -143,11 +144,15 @@ function BlogNoteAdd() {
             value={input.content}
             autoComplete="off"
             className="form-control"
-            placeholder="blog content"
+            placeholder="Blog Post"
           ></textarea>
         </div>
 
-        <button onClick={handleClick} className="btn btn-lg btn-info">
+        <button
+          id="addnote-btn"
+          onClick={handleClick}
+          className="btn btn-lg btn"
+        >
           Add Note
         </button>
       </form>
