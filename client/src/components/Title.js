@@ -4,13 +4,14 @@ import "./Title.css";
 function Title() {
   return (
     <div>
-      <motion.div
-        animate={{ opacity: 0 }}
-        transition={{ duration: 10 }}
+      {/* <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 8 }}
         className="title text-center"
       >
         FULLSTACKERS
-      </motion.div>{" "}
+      </motion.div>{" "} */}
     </div>
   );
 }

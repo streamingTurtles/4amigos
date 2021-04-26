@@ -1,0 +1,34 @@
+.allNotes-title {
+  font-family: "Lora", serif;
+  font-size: 48px;
+}
+h2 {
+  font-family: "Lora", serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+#description {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+.notes {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: auto;
+}
+
+.delete-btn {
+  font-size: 17px;
+  background-color: white;
+  color: #6d77ff;
+  border-radius: 5px;
+  border-color: #6d77ff;
+  margin-left: 38rem;
+}
+.delete-btn:hover {
+  color: #6d77ff;
+  transform: scale(1.2);
+}

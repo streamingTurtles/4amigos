@@ -1,0 +1,11 @@
+.footer {
+  height: 4rem;
+  background-color: #343a40;
+  color: white;
+  font-size: 16px;
+  padding-top: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.far {
+  color: #6d77ff;
+}
