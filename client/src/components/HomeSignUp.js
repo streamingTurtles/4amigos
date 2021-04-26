@@ -76,11 +76,9 @@ function HomeSignUp() {
           className="col-md-4"
           style={style.content}
         >
-          <h1 className="signUp-title text-center">Welcome Stackers!</h1>
-          <hr></hr>
-
+          <h1 className="signUp-title text-center">Welcome!</h1>
           <div className="App">
-            <h1 className="sub-titles">Create your account</h1>
+            <h1 className="sub-titles">Would you like to register?</h1>
             <input
               className="user-input"
               placeholder="Username"
@@ -95,7 +93,7 @@ function HomeSignUp() {
             <button className="hsu-btn" onClick={register}>
               Register
             </button>
-            <h1 className="sub-titles">Log in to your account</h1>
+            <h1 className="sub-titles">Have an account already, Login!</h1>
             <input
               className="user-input"
               placeholder="Username"
@@ -118,7 +116,7 @@ function HomeSignUp() {
               Submit
             </button>
             {data ? (
-              <h1 className="sub-titles text-capitalize">
+              <h1 className="sub-titles ">
                 You're Signed In, {data.username}!
               </h1>
             ) : null}

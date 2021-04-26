@@ -21,18 +21,18 @@ function NavBar(props) {
       <h4 className="nav-title">FULLSTACKERS</h4>
       <h4>
         <Link className="nav-link link" to="/">
-          Home
+          <i class="fas fa-igloo fa-lg"></i>
         </Link>
       </h4>
       {/* <h4><Link className="nav-link link" to="/api" >SignUp Route</Link></h4> */}
       <h4>
         <Link className="nav-link link" to="/blognoteadd">
-          Post on the Board
+          <i class="fas fa-user-edit fa-lg"></i>{" "}
         </Link>
       </h4>
       <h4>
         <Link className="nav-link link" to="/blognotesall">
-          The Board
+          <i class="fas fa-chalkboard fa-lg"></i>{" "}
         </Link>
       </h4>
       {/* <div>
