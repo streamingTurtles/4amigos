@@ -5,7 +5,8 @@ function Footer() {
     <div>
       <div className="footer text-center">
         {" "}
-        Made with <i class="far fa-heart fa-lg"></i>
+        FULLSTACKERS - Columbia Engineering Fullstack Bootcamp, 2020-2021{" "}
+        <i class="far fa-copyright fa-lg"></i>{" "}
       </div>
     </div>
   );
